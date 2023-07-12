@@ -2344,6 +2344,11 @@ section:hover .controls div:not(.disabled) {
     font: 16px/1 'Open Sans',sans-serif
 }
 
+
+
+
+
+
 footer {
     background: #1e1f21;
     color: #fff;
@@ -2482,6 +2487,11 @@ footer .links .social a.twitter {
 footer .links .social a.gplus {
     background-image: url(//cfm.yidio.com/redesign/img/ico-gplus-36-1x.png)
 }
+
+
+
+
+
 
 .qtip {
     position: absolute;
