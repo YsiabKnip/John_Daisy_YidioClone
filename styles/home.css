@@ -1,0 +1,54 @@
+/* ==========
+Homepage
+========== */
+
+.hero {
+    height: 35vh;
+    position: relative;
+    margin-top: -82px;
+}
+
+.hero.homepage .background {
+    background-image: url("../images/hero-1920x1080.jpg");
+    opacity: 0.7;
+}
+
+.hero.homepage .content {
+    margin-top: 2.5vw;
+}
+
+.hero.homepage .tagline h1 .first-line {
+    font-size: 3.9vw;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 140%;
+}
+
+.hero.homepage .tagline h1 .second-line {
+    font-size: 3.6vw;
+    letter-spacing: -0.02em;
+    font-weight: 300;
+}
+
+.hero.homepage .tagline .button {
+    margin-top: 3.3vw;
+    margin-right: 2vw;
+}
+
+@media only screen and (min-width: 1920px) {
+
+    .hero {
+        height: 710px;
+    }
+
+    .hero.homepage .content {
+        margin-top: 16px;
+    }
+
+    .hero.homepage .tagline .button {
+        padding: 0 36px;
+        margin-top: 64px;
+        margin-right: 38px;
+    }
+
+}
