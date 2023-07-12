@@ -659,7 +659,7 @@ header .search .results li.hover::after {
 }
 
 .hero.homepage .background {
-    background-image: url(//cfm.yidio.com/redesign/img/hero-1920x1080.jpg);
+    background-image: url("../images/hero-1920x1080.jpg");
     opacity: .7
 }
 
