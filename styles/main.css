@@ -127,6 +127,21 @@ header {
     box-sizing: border-box
 }
 
+header .navbar-toggler {
+    background: rgba(41, 42, 42, 0.98);
+}   
+header.bg-black .navbar-toggler {
+    margin-top: 4px;
+    background: transparent;
+}   
+header.bg-black {
+    background: rgba(41, 42, 42, 0.98)!important;
+}
+
+
+
+
+
 header .gradient {
     position: absolute;
     top: 0;
@@ -157,7 +172,8 @@ header nav {
     box-sizing: border-box;
     padding: 0 47px;
     z-index: 10;
-    background: rgba(255,255,255,.1)
+    background: rgba(255,255,255,.1);
+    padding-top:0;
 }
 
 header.transparent,header.transparent nav {

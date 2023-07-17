@@ -20,21 +20,67 @@
 
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" media="print">
 
-    <link rel="stylesheet" href="styles/global.css" media="all">    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="styles/global.css" media="all">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link rel="stylesheet" href="styles/home.css" media="all">
     <link rel="stylesheet" href="styles/main.css" media="all">
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="styles/mobile.css" media="all">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        defer></script>
     <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
     <div class="main-wrapper">
+
         <header class="transparent" style="background: none;">
-            <nav style="background: rgba(255, 255, 255, 0.01);">
+            <nav style="background: rgba(255, 255, 255, 0.01);" class="navbar navbar-dark">
                 <ul class="main">
+                    <li class="mobile-menu">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- OFFCANVAS MENU -->
+                        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                            aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="search" style="display: block;">
+                                        <div class="icon"></div>
+                                        <input type="text" autocomplete="off" placeholder="What do you want to watch?"
+                                            style="border-color: rgba(255, 255, 255, 0.176);">
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.yidio.com/tv-shows">TV Shows</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.yidio.com/movies">Movies</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.yidio.com/login.php">Sign In</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.yidio.com/signup.php">
+                                            <div>Sign Up</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
                     <li class="logo">
                         <a href="https://www.yidio.com/" title="Yidio">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -288,99 +334,124 @@
             <div class="browse-sections">
                 <!-- DISPLAY ALL JSON DATA SLIDER -->
 
-                    <section>
-                        <div class="title">Trending Now</div>
-                        <div id="trending_now-carouselControls" class="jpx-listAllMovies carousel slide" data-bs-ride="carousel" data-movie-per-slide=9 data-movie-category="trending_now" data-bs-touch="false" data-bs-interval="false">
-                            <div class="carousel-inner"></div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#trending_now-carouselControls" data-bs-slide="prev">
+                <section>
+                    <div class="title">Trending Now</div>
+                    <div id="trending_now-carouselControls" class="jpx-listAllMovies carousel slide"
+                        data-bs-ride="carousel" data-movie-per-slide=9 data-movie-category="trending_now"
+                        data-bs-touch="false" data-bs-interval="false">
+                        <div class="carousel-inner"></div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#trending_now-carouselControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#trending_now-carouselControls" data-bs-slide="next">
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#trending_now-carouselControls" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </section>
+                        </button>
+                    </div>
+                </section>
 
-                    <section>
-                        <div class="title"><a href="https://www.yidio.com/tv-shows">Popular TV Shows</a></div>
-                        <div id="popular_tv_shows-CarouselControls" class="jpx-listAllMovies carousel slide" data-bs-ride="carousel" data-movie-per-slide=9 data-movie-category="popular_tv_shows" data-bs-touch="false" data-bs-interval="false">
-                            <div class="carousel-inner"></div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#popular_tv_shows-CarouselControls" data-bs-slide="prev">
+                <section>
+                    <div class="title"><a href="https://www.yidio.com/tv-shows">Popular TV Shows</a></div>
+                    <div id="popular_tv_shows-CarouselControls" class="jpx-listAllMovies carousel slide"
+                        data-bs-ride="carousel" data-movie-per-slide=9 data-movie-category="popular_tv_shows"
+                        data-bs-touch="false" data-bs-interval="false">
+                        <div class="carousel-inner"></div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#popular_tv_shows-CarouselControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#popular_tv_shows-CarouselControls" data-bs-slide="next">
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#popular_tv_shows-CarouselControls" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </section>
+                        </button>
+                    </div>
+                </section>
 
-                    <section>
-                        <div class="title"><a href="https://www.yidio.com/tv-shows">Popular Movies</a></div>
-                        <div id="popular_movies-CarouselControls" class="jpx-listAllMovies carousel slide" data-bs-ride="carousel" data-movie-per-slide=9 data-movie-category="popular_movies" data-bs-touch="false" data-bs-interval="false">
-                            <div class="carousel-inner"></div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#popular_movies-CarouselControls" data-bs-slide="prev">
+                <section>
+                    <div class="title"><a href="https://www.yidio.com/tv-shows">Popular Movies</a></div>
+                    <div id="popular_movies-CarouselControls" class="jpx-listAllMovies carousel slide"
+                        data-bs-ride="carousel" data-movie-per-slide=9 data-movie-category="popular_movies"
+                        data-bs-touch="false" data-bs-interval="false">
+                        <div class="carousel-inner"></div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#popular_movies-CarouselControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#popular_movies-CarouselControls" data-bs-slide="next">
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#popular_movies-CarouselControls" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </section>
+                        </button>
+                    </div>
+                </section>
 
-                    <section>
-                        <div class="title"><a href="https://www.yidio.com/tv-schedule">TV Schedule for Friday, July 14th</a></div>
-                        <div id="tv_schedule-CarouselControls" class="jpx-listAllMovies carousel slide" data-bs-ride="carousel" data-movie-per-slide=5 data-movie-category="tv_schedule" data-bs-touch="false" data-bs-interval="false">
-                            <div class="carousel-inner"></div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#tv_schedule-CarouselControls" data-bs-slide="prev">
+                <section>
+                    <div class="title"><a href="https://www.yidio.com/tv-schedule">TV Schedule for <span
+                                id="dateContainer"></span></a></div>
+                    <div id="tv_schedule-CarouselControls" class="jpx-listAllMovies carousel slide"
+                        data-bs-ride="carousel" data-movie-per-slide=5 data-movie-category="tv_schedule"
+                        data-bs-touch="false" data-bs-interval="false">
+                        <div class="carousel-inner"></div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#tv_schedule-CarouselControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#tv_schedule-CarouselControls" data-bs-slide="next">
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#tv_schedule-CarouselControls" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </section>
+                        </button>
+                    </div>
+                </section>
 
-                    <section>
-                        <div class="title"><a href="https://www.yidio.com/movies/filter/free">Free Movies</a></div>
-                        <div id="free_movies-CarouselControls" class="jpx-listAllMovies carousel slide" data-bs-ride="carousel" data-movie-per-slide=9 data-movie-category="free_movies" data-bs-touch="false" data-bs-interval="false">
-                            <div class="carousel-inner"></div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#free_movies-CarouselControls" data-bs-slide="prev">
+                <section>
+                    <div class="title"><a href="https://www.yidio.com/movies/filter/free">Free Movies</a></div>
+                    <div id="free_movies-CarouselControls" class="jpx-listAllMovies carousel slide"
+                        data-bs-ride="carousel" data-movie-per-slide=9 data-movie-category="free_movies"
+                        data-bs-touch="false" data-bs-interval="false">
+                        <div class="carousel-inner"></div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#free_movies-CarouselControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#free_movies-CarouselControls" data-bs-slide="next">
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#free_movies-CarouselControls" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </section>
+                        </button>
+                    </div>
+                </section>
 
-                    <section>
-                        <div class="title">Just Aired Episodes</div>
-                        <div id="just_aired_episodes-CarouselControls" class="jpx-listAllMovies carousel slide" data-bs-ride="carousel" data-movie-per-slide=5 data-movie-category="just_aired_episodes" data-bs-touch="false" data-bs-interval="false">
-                            <div class="carousel-inner"></div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#just_aired_episodes-CarouselControls" data-bs-slide="prev">
+                <section>
+                    <div class="title">Just Aired Episodes</div>
+                    <div id="just_aired_episodes-CarouselControls" class="jpx-listAllMovies carousel slide"
+                        data-bs-ride="carousel" data-movie-per-slide=5 data-movie-category="just_aired_episodes"
+                        data-bs-touch="false" data-bs-interval="false">
+                        <div class="carousel-inner"></div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#just_aired_episodes-CarouselControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#just_aired_episodes-CarouselControls" data-bs-slide="next">
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#just_aired_episodes-CarouselControls" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </section>
-      
+                        </button>
+                    </div>
+                </section>
 
 
-                <!--ENDOF =>>> DISPLAY ALL JSON DATA SLIDER --> 
+
+                <!--ENDOF =>>> DISPLAY ALL JSON DATA SLIDER -->
 
                 <section class="loaded">
                     <div class="title">Watch Live Free</div>
@@ -396,11 +467,10 @@
                                         <div class="stream national">
                                             <div class="icon">
                                                 <div class="container">
-                                                    <img
-                                                        src="images/logo-180h--50GlWs.png"
-                                                        data-src="images/logo-180h--50GlWs.png"
-                                                        alt="News 24/7" class="lazy-loaded">
-                                                    </div>
+                                                    <img src="images/logo-180h--50GlWs.png"
+                                                        data-src="images/logo-180h--50GlWs.png" alt="News 24/7"
+                                                        class="lazy-loaded">
+                                                </div>
                                             </div>
                                             <div class="button">
                                                 <div class="circle" style="border-color:#1aabca"></div>
@@ -416,10 +486,9 @@
                                         rel="nofollow noopener noreferrer">
                                         <div class="stream national">
                                             <div class="icon">
-                                                <div class="container"><img
-                                                        src="images/logo-180h--EIo78y.png"
-                                                        data-src="images/logo-180h--EIo78y.png"
-                                                        alt="Horror" class="lazy-loaded"></div>
+                                                <div class="container"><img src="images/logo-180h--EIo78y.png"
+                                                        data-src="images/logo-180h--EIo78y.png" alt="Horror"
+                                                        class="lazy-loaded"></div>
                                             </div>
                                             <div class="button">
                                                 <div class="circle" style="border-color:#1aabca"></div>
@@ -435,10 +504,9 @@
                                         rel="nofollow noopener noreferrer">
                                         <div class="stream national">
                                             <div class="icon">
-                                                <div class="container"><img
-                                                        src="images/logo-180h--Xh2tNh.png"
-                                                        data-src="images/logo-180h--Xh2tNh.png"
-                                                        alt="Stand-up TV" class="lazy-loaded"></div>
+                                                <div class="container"><img src="images/logo-180h--Xh2tNh.png"
+                                                        data-src="images/logo-180h--Xh2tNh.png" alt="Stand-up TV"
+                                                        class="lazy-loaded"></div>
                                             </div>
                                             <div class="button">
                                                 <div class="circle" style="border-color:#1aabca"></div>
@@ -450,14 +518,13 @@
                                         </div>
                                     </a></div>
                                 <div class="slide active" style="width: 143.294px; margin-right: 10px;"><a
-                                        href="https://www.yidio.com/live/anime-all-day/602" title="Watch Anime All Day Live"
-                                        rel="nofollow noopener noreferrer">
+                                        href="https://www.yidio.com/live/anime-all-day/602"
+                                        title="Watch Anime All Day Live" rel="nofollow noopener noreferrer">
                                         <div class="stream national">
                                             <div class="icon">
-                                                <div class="container"><img
-                                                        src="images/logo-180h.png"
-                                                        data-src="images/logo-180h.png"
-                                                        alt="Anime All Day" class="lazy-loaded"></div>
+                                                <div class="container"><img src="images/logo-180h.png"
+                                                        data-src="images/logo-180h.png" alt="Anime All Day"
+                                                        class="lazy-loaded"></div>
                                             </div>
                                             <div class="button">
                                                 <div class="circle" style="border-color:#1aabca"></div>
@@ -478,39 +545,39 @@
                     <div class="clear"></div>
                 </a>
             </div>
-    </main>
-    <footer>
-        <div class="links">
-            <nav class="main">
-                <ul class="first-line">
-                    <li><a href="https://www.yidio.com/">Home</a></li>
-                    <li><a href="https://www.yidio.com/tv-shows">Top Shows</a></li>
-                    <li><a href="https://www.yidio.com/movies">Top Movies</a></li>
-                    <li><a href="https://www.yidio.com/watchlist" rel="nofollow">Watchlist</a></li>
-                    <li><a href="https://help.yidio.com/support/home" rel="noopener noreferrer">Help</a></li>
-                    <li><a href="https://www.yidio.com/app/">Download App</a></li>
-                    <li><a href="https://www.yidio.com/aboutus">About</a></li>
-                    <li><a href="https://www.yidio.com/jobs">Careers</a></li>
-                </ul>
-                <ul class="second-line">
-                    <li><span>© 2023 Yidio LLC</span></li>
-                    <li><a href="https://www.yidio.com/privacy">Privacy Policy</a></li>
-                    <li><a href="https://www.yidio.com/tos">Terms of Use</a></li>
-                    <li><a href="https://www.yidio.com/tos#copyright">DMCA</a></li>
-                </ul>
-            </nav>
-            <nav class="social">
-                <ul>
-                    <li><a class="facebook" title="Facebook" href="https://www.facebook.com/Yidio" target="_blank"
-                            rel="noopener noreferrer"></a></li>
-                    <li><a class="twitter" title="Twitter" href="https://twitter.com/yidio" target="_blank"
-                            rel="noopener noreferrer"></a></li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
+        </main>
+        <footer>
+            <div class="links">
+                <nav class="main">
+                    <ul class="first-line">
+                        <li><a href="https://www.yidio.com/">Home</a></li>
+                        <li><a href="https://www.yidio.com/tv-shows">Top Shows</a></li>
+                        <li><a href="https://www.yidio.com/movies">Top Movies</a></li>
+                        <li><a href="https://www.yidio.com/watchlist" rel="nofollow">Watchlist</a></li>
+                        <li><a href="https://help.yidio.com/support/home" rel="noopener noreferrer">Help</a></li>
+                        <li><a href="https://www.yidio.com/app/">Download App</a></li>
+                        <li><a href="https://www.yidio.com/aboutus">About</a></li>
+                        <li><a href="https://www.yidio.com/jobs">Careers</a></li>
+                    </ul>
+                    <ul class="second-line">
+                        <li><span>© 2023 Yidio LLC</span></li>
+                        <li><a href="https://www.yidio.com/privacy">Privacy Policy</a></li>
+                        <li><a href="https://www.yidio.com/tos">Terms of Use</a></li>
+                        <li><a href="https://www.yidio.com/tos#copyright">DMCA</a></li>
+                    </ul>
+                </nav>
+                <nav class="social">
+                    <ul>
+                        <li><a class="facebook" title="Facebook" href="https://www.facebook.com/Yidio" target="_blank"
+                                rel="noopener noreferrer"></a></li>
+                        <li><a class="twitter" title="Twitter" href="https://twitter.com/yidio" target="_blank"
+                                rel="noopener noreferrer"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
     </div>
-    
+
 </body>
 
 </html>

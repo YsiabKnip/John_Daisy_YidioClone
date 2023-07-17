@@ -1,7 +1,6 @@
 /* ==========
 Homepage
 ========== */
-
 .hero {
     height: 35vh;
     position: relative;
@@ -85,20 +84,12 @@ Homepage
     opacity: 1;
 }
 
-@media only screen and (min-width: 1920px) {
-
-    .hero {
-        height: 710px;
-    }
-
-    .hero.homepage .content {
-        margin-top: 16px;
-    }
-
-    .hero.homepage .tagline .button {
-        padding: 0 36px;
-        margin-top: 64px;
-        margin-right: 38px;
-    }
-
+header .main .mobile-menu {
+    display:none;
+}
+.offcanvas {
+    background: #333;
+}
+.navbar {
+    padding-top:0;
 }

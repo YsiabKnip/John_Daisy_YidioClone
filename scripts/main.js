@@ -1,7 +1,7 @@
 /*
  DOM READY
 ***************************/
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
 
   const containers = document.querySelectorAll('.jpx-listAllMovies')
 
@@ -11,7 +11,73 @@
     }
   }
 
-})();
+  // ON WINDOW SCROLL ADD HEADER CLASS
+  const elemHeader = document.querySelector("header");
+
+  window.addEventListener("scroll", function () {
+    // Check if the window is scrolled to the top
+    if (window.scrollY === 0) {
+      // Remove a class to the element when scrolled to the top
+      elemHeader.classList.remove("bg-black");
+    } else {
+      // Add the class if scrolled away from the top
+      elemHeader.classList.add("bg-black");
+    }
+  });
+
+  // SET FORMATED DATE
+  const dateContainer = document.querySelector('#dateContainer')
+  getFormatedDateToday(dateContainer)
+
+});
+/*
+  GET DATE TODAY format (Monday, July 17th)
+***************************/
+function getFormatedDateToday(container) {
+  // Create a new Date object with the current date
+  const today = new Date();
+
+  // Define the weekdays and months arrays
+  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  // Get the day of the week, month, and day of the month
+  const dayOfWeek = weekdays[today.getDay()];
+  const month = months[today.getMonth()];
+  const day = today.getDate();
+
+  // Get the suffix for the day of the month
+  const suffix = getNumberSuffix(day);
+
+  // Format the date string
+  const formattedDate = dayOfWeek + ", " + month + " " + day + suffix;
+
+  // Output the formatted date
+  container.innerHTML = formattedDate
+}
+
+
+/*
+  Function to get the suffix for the day of the month
+***************************/
+function getNumberSuffix(number) {
+  if (number >= 11 && number <= 13) {
+    return "th";
+  }
+
+  const lastDigit = number % 10;
+  switch (lastDigit) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+}
+
 
 /*
   FETCH JSON DATA
@@ -36,7 +102,6 @@ function fetchJsonData(container) {
 
       // Use the data from the JSON file
       //console.log(data);
-      
       LayoutSlider(id, moviePerSlide, data);
 
     })
@@ -53,7 +118,7 @@ function LayoutSlider(id, moviePerSlide, data) {
   let movieList = "";
   let itemSlideCounter = 0;
 
-  if(movieItems && movieItems.length > 0){
+  if (movieItems && movieItems.length > 0) {
     for (let i = 0; i < movieItems.length; i++) {
       movieList +=
         `<div class="img-wrap" style="width:calc(100%/${moviePerSlide})">
